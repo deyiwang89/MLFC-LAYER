@@ -1,6 +1,9 @@
 import torch
 import torch.nn as nn
 
+def conv1x1(in, out, stride = 1):
+    return nn.Conv2d(in, out, kernel_size=1, stride=stride, bias=False)
+
 class General(nn.Module):
     def __init__(self, channel, reduction = 16):
         super(General, self).__init__()
